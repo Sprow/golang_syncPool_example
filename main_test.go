@@ -23,6 +23,7 @@ func BenchmarkWithPool1000(b *testing.B) {
 			return
 		}
 	}
+	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		work()
 	}
@@ -44,6 +45,7 @@ func BenchmarkWithoutPool1000(b *testing.B) {
 			return
 		}
 	}
+	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		work()
 	}
@@ -64,6 +66,7 @@ func BenchmarkWithPool10000(b *testing.B) {
 			return
 		}
 	}
+	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		work()
 	}
@@ -85,6 +88,7 @@ func BenchmarkWithoutPool10000(b *testing.B) {
 			return
 		}
 	}
+	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		work()
 	}
